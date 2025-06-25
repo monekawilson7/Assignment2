@@ -14,7 +14,15 @@ namespace Assignment2
                 Console.WriteLine("yes");
             else
                 Console.WriteLine("no");
-
+            #endregion
+            #region Q2
+            int number;
+            Console.WriteLine("Enter a number: ");
+            number = int.Parse(Console.ReadLine());
+            if (number >= 0)
+                Console.WriteLine("positive");
+            else
+                Console.WriteLine("negative");
             #endregion
         }
     }
