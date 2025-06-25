@@ -107,6 +107,15 @@ namespace Assignment2
                 else
                     Console.Write(i);
             }
+            #endregion 
+            #region Q7
+            int number;
+            Console.WriteLine("Enter a number: ");
+            number = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= 12; i++)
+            { 
+                Console.Write(number*i +" ");
+            }
             #endregion
         }
     }
