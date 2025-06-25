@@ -6,8 +6,9 @@ namespace Assignment2
     {
         static void Main(string[] args)
         {
-           
-             #region Q1
+
+            #region Q1
+            
              int number;
              Console.WriteLine("Enter a number: ");
              number = int.Parse(Console.ReadLine());
@@ -126,6 +127,20 @@ namespace Assignment2
                 if (i % 2 == 0)
                     Console.Write(i + " ");
             }
+            #endregion
+            #region Q9
+            int num1;
+            int num2;
+            int result=1;
+            Console.WriteLine("Enter 3 numbers: ");
+            string[] input = Console.ReadLine().Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            num1 = int.Parse(input[0]);
+            num2 = int.Parse(input[1]);
+            for (int i = 1; i <= num2; i++)
+            {
+                result *= num1;
+                    }
+            Console.WriteLine(result);
             #endregion
         }
     }
