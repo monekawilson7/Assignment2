@@ -187,8 +187,24 @@ namespace Assignment2
                     break;
             }
             Console.WriteLine($"Days in Month: {Days}");
-
             #endregion
+            #region Q12
+            Console.WriteLine("Enter Number");
+            int num = int.Parse(Console.ReadLine());
+            for (int i = 0; i < num; i++)
+            {
+                for (int j = 0; j < num; j++)
+                {
+                    if (i == j)
+                        Console.Write("1");
+                    else
+                        Console.Write("0");
+                }
+                Console.WriteLine(); 
+            
+            }
+            #endregion
+
 
         }
     }
