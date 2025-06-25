@@ -268,7 +268,45 @@ namespace Assignment2
             }
             Console.WriteLine($"Max element is {max}");
             Console.WriteLine($"min element is {min}");
-            #endregion
+            #endregion 
+            #region Q16
+            Console.WriteLine("Enter number of elements");
+            int n = int.Parse(Console.ReadLine());
+            if (n < 2)
+            {
+                Console.WriteLine("min numbers of elements are 2");
+                return;
+            }
+            int[] arr = new int[n];
+            Console.WriteLine("Enter elements");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = int.Parse(Console.ReadLine());
+            }
+            int max = int.MinValue;
+            int secondMax = int.MinValue;
+            for (int i = 0; i < n; i++)
+            {
+                if (arr[i] > max)
+                {
+                    secondMax = max;
+                    max = arr[i];
+                }
+                else if (arr[i] > secondMax && arr[i] != max)
+                {
+                    secondMax = arr[i];
+                }
+            }
+
+            if (secondMax == int.MinValue)
+            {
+                Console.WriteLine("There is no second largest element");
+            }
+            else
+            {
+                Console.WriteLine($"Second largest element = {secondMax}");
+            }
         }
+        #endregion
     }
-}
+    }
