@@ -204,7 +204,7 @@ namespace Assignment2
             
             }
             #endregion
-            #region Q12
+            #region Q13
             Console.WriteLine("Enter number of elemrnts");
             int n = int.Parse(Console.ReadLine());
             int sum = 0;
@@ -216,6 +216,58 @@ namespace Assignment2
                 sum += numbers[i];
             }
             Console.WriteLine($"Sum of elements = {sum}");
+            #endregion
+            #region Q14
+            int[] arr = new int[100];
+            int[] freq = new int[100];
+            int count;
+            Console.WriteLine("Enter number of elemrnts");
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter elemnts");
+            for (int i = 0; i < n; i++)
+            { 
+            arr[i] = int.Parse(Console.ReadLine());
+                freq[i] = -1;
+            }
+            for (int i = 0; i < n; i++)
+            {
+                count = 1;
+                for (int j = i+1; j < n; j++) {
+                    if (arr[i] == arr[j] && freq[j] != 0)
+                    { 
+                    count++;
+                        freq[j] = 0;
+                    }
+                }
+                if (freq[i]!= 0)
+                    freq[i] = count;
+            }
+            for (int i = 0; i < n; i++)
+            {
+                if (freq[i] != 0)
+                    Console.WriteLine($"{arr[i]} occurs {freq[i]} time ");
+            };
+            #endregion
+            #region Q15
+            Console.WriteLine("Enter number of elemrnts");
+            int n = int.Parse(Console.ReadLine());
+            int [] arr = new int[n];
+            Console.WriteLine("Enter elements");
+            for (int i = 0; i < arr.Length; i++) { 
+            arr[i] = int.Parse(Console.ReadLine());
+            }
+            int max = arr[0];
+            int min = arr[0];
+            for (int i = 1; i < n; i++)
+            {
+                if (arr[i] > max)
+                    max = arr[i];
+
+                if (arr[i] < min)
+                    min = arr[i];
+            }
+            Console.WriteLine($"Max element is {max}");
+            Console.WriteLine($"min element is {min}");
             #endregion
         }
     }
