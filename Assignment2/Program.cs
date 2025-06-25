@@ -204,8 +204,19 @@ namespace Assignment2
             
             }
             #endregion
-
-
+            #region Q12
+            Console.WriteLine("Enter number of elemrnts");
+            int n = int.Parse(Console.ReadLine());
+            int sum = 0;
+            int[] numbers = new int[n];
+            Console.WriteLine("Enter elemnts");
+            for (int i = 0; i < numbers.Length; i++)
+            { 
+            numbers[i] = int.Parse(Console.ReadLine());
+                sum += numbers[i];
+            }
+            Console.WriteLine($"Sum of elements = {sum}");
+            #endregion
         }
     }
 }
