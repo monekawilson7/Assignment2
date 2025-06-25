@@ -6,9 +6,7 @@ namespace Assignment2
     {
         static void Main(string[] args)
         {
-
             #region Q1
-            
              int number;
              Console.WriteLine("Enter a number: ");
              number = int.Parse(Console.ReadLine());
@@ -142,6 +140,56 @@ namespace Assignment2
                     }
             Console.WriteLine(result);
             #endregion
+            
+            #region Q10
+            Console.WriteLine("Enter marks:");
+            String[] input = Console.ReadLine().Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
+            int[] marks = Array.ConvertAll(input,int.Parse);
+            int total = 0;
+            for (int i = 0; i < marks.Length; i++)
+            {
+                total += marks[i];  
+            }
+            double avg = total / marks.Length;
+            double percent = (total *100)/500 ;
+            Console.WriteLine($"Total marks = {total}");
+            Console.WriteLine($"Average Marks = {avg}");
+            Console.WriteLine($"Percentage = {percent}");
+
+        }
+        #endregion
+            #region Q11
+            Console.WriteLine("Month Number: ");
+            int month = int.Parse(Console.ReadLine());
+            int Days=1;
+            switch (month)
+            {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    Days = 31;
+                    break;
+                case 2:
+                    Days = 28;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    Days = 30;
+                    break;
+                default:
+                    Console.WriteLine("Invalid month");
+                    break;
+            }
+            Console.WriteLine($"Days in Month: {Days}");
+
+            #endregion
+
         }
     }
 }
