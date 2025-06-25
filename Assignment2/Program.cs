@@ -6,7 +6,7 @@ namespace Assignment2
     {
         static void Main(string[] args)
         {
-            
+           
              #region Q1
              int number;
              Console.WriteLine("Enter a number: ");
@@ -115,6 +115,16 @@ namespace Assignment2
             for (int i = 1; i <= 12; i++)
             { 
                 Console.Write(number*i +" ");
+            }
+            #endregion 
+            #region Q8
+            int number;
+            Console.WriteLine("Enter a number: ");
+            number = int.Parse(Console.ReadLine());
+            for (int i = 2; i <= number; i++)
+            {
+                if (i % 2 == 0)
+                    Console.Write(i + " ");
             }
             #endregion
         }
